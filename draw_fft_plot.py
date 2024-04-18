@@ -17,10 +17,13 @@ data_fft = fftpack.fft(data, fftsize)
 
 Ts = 1/samplerate 
 ############################################
+
 # WRITE DOWN YOUR FFT PLOT CODE HERE 
 # X axis is Frequency, Y axis is Power
-
-
+fft_freq=np.fft.fftfreq(fftsize, Ts)
+plt.plot(fft_freq, data_fft)
+plt.xlabel('Frequency')
+plt.ylabel('Power')
 
 ############################################
 
